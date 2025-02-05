@@ -39,8 +39,7 @@ export default function Sidebar({initialMenuItems}) {
 
     <div>
    <ul>
-{menuItems.map(item => item.toLowerCase())
-.filter(item => item.includes(filter.toLowerCase())).map(renderList)
+{menuItems.filter(item => item.toLowerCase().includes(filter.toLocaleLowerCase())).map(renderList)
 }
    </ul>
       <input
